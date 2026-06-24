@@ -12,36 +12,13 @@
 
 `./bootstrap.sh`（= `brew bundle`）で入るので個別作業は不要。
 
-| アプリ | cask | 旧ver |
-|---|---|---|
-| Anki | `anki` | 25.09 |
-| Discord | `discord` | 0.0.290 |
-| iTerm2 | `iterm2` | 3.6.x（Hyperから移行・設定は `iterm2/`） |
-| Postman | `postman` | 10.24.26 |
-| Raycast | `raycast` | 1.70.2 |
-| Visual Studio Code | `visual-studio-code` | 1.107.1 |
-
----
-
-## 🍺 Homebrew cask で入る（手動・コピペ可）
-
-```sh
-brew install --cask istat-menus@6        # iStat Menus 6  ⚠️ ライセンスキーは手動入力
-brew install --cask surfshark            # Surfshark      ⚠️ アカウントでログイン必要
-brew install --cask docker               # Docker Desktop
-brew install --cask microsoft-teams      # Microsoft Teams
-brew install --cask zoom                 # Zoom
-brew install --cask appcleaner           # AppCleaner
-brew install --cask claude               # Claude
-brew install --cask karabiner-elements   # Karabiner-Elements（dotfilesの設定と連動）
-brew install --cask logi-options-plus    # Logi Options+
-brew install --cask tempbox              # TempBox
-```
-
 | アプリ | cask | 旧ver | 備考 |
 |---|---|---|---|
-| **iStat Menus 6** | `istat-menus@6` | 6.72 | ⚠️ ライセンスキー手動入力。最新は `istat-menus`(v7) |
-| Surfshark | `surfshark` | 4.25.0 | ⚠️ ログイン必要 |
+| Anki | `anki` | 25.09 | |
+| iTerm2 | `iterm2` | 3.6.x | Hyperから移行・設定は `iterm2/` |
+| Raycast | `raycast` | 1.70.2 | 設定もこのリポジトリ |
+| Visual Studio Code | `visual-studio-code` | 1.107.1 | 設定もこのリポジトリ |
+| **iStat Menus 6** | `istat-menus@6` | 6.72 | ⚠️ 初回にライセンスキー手動入力 |
 | Docker | `docker` | 4.46.0 | |
 | Microsoft Teams | `microsoft-teams` | — | |
 | Zoom | `zoom` | 6.6.11 | |
@@ -49,6 +26,25 @@ brew install --cask tempbox              # TempBox
 | Claude | `claude` | 1.15200.0 | |
 | Karabiner-Elements | `karabiner-elements` | 15.5.0 | 設定は `config/karabiner/` |
 | Logi Options+ | `logi-options-plus` | 1.98.x | Logicool マウス/キーボード |
+
+---
+
+## 🍺 Homebrew cask で入るが、手動扱い（必要時にコピペ）
+
+`[manual]` 指定にしたもの。Brewfileには入れていないので、欲しくなったら下記を実行。
+
+```sh
+brew install --cask discord              # Discord
+brew install --cask postman              # Postman
+brew install --cask surfshark            # Surfshark   ⚠️ アカウントでログイン必要
+brew install --cask tempbox              # TempBox
+```
+
+| アプリ | cask | 旧ver | 備考 |
+|---|---|---|---|
+| Discord | `discord` | 0.0.290 | |
+| Postman | `postman` | 10.24.26 | |
+| Surfshark | `surfshark` | 4.25.0 | ⚠️ ログイン必要 |
 | TempBox | `tempbox` | 1.1 | 使い捨てメール |
 
 ---

@@ -36,16 +36,28 @@ brew "tmux"
 brew "yarn"
 # Memory training application
 cask "anki"
-# Voice and text chat software
-cask "discord"
 # Terminal emulator (replaces Hyper; config in iterm2/ + config/colors/)
 cask "iterm2"
-# Collaboration platform for API development
-cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Open-source code editor
 cask "visual-studio-code"
+# System monitoring menu-bar app (license key entered manually after install)
+cask "istat-menus@6"
+# Container runtime / Docker Desktop
+cask "docker"
+# Team chat & meetings
+cask "microsoft-teams"
+# Video conferencing
+cask "zoom"
+# Drag-to-uninstall apps
+cask "appcleaner"
+# Claude desktop app
+cask "claude"
+# Keyboard customizer (config in config/karabiner/)
+cask "karabiner-elements"
+# Logitech mouse/keyboard settings
+cask "logi-options-plus"
 # Fonts — required by iTerm2 / VSCode terminal (SauceCodePro Nerd Font Mono),
 # VSCode editor (Source Code Pro), and powerlevel10k glyphs. Without these the
 # prompt icons render as tofu/garbled boxes.
