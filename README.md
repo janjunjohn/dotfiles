@@ -46,6 +46,13 @@ prompt and the iTerm2/VSCode terminal glyphs to render correctly.
 - **Karabiner** — first launch needs Input Monitoring permission in
   System Settings → Privacy & Security.
 
+### Other apps (manual)
+
+GUI apps that aren't auto-installed (iStat Menus 6, Docker, Slack, App Store
+apps, …) are inventoried in [`docs/applications.md`](docs/applications.md) with
+their install method and ready-to-paste `brew install --cask` commands. Install
+only the ones you still need.
+
 ## Keyboard remaps live in Karabiner, not macOS
 
 Caps Lock → Control (and Left Control → fn), Ctrl-`[` → Esc, and fn+h/j/k/l →
