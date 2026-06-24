@@ -1,0 +1,19 @@
+現在このmacでは、様々なカスタマイズをしており、system settings、アプリ、config類をそのままmac miniに引き継ぎたい。具体的には以下の内容(漏れがあるかも)
+
+- macのsettingsで設定できる各種shortcut類。(modifier keyやsafariのショートカットなどなど)
+- 連続入力のスピードと、連続入力判定までの時間
+- ↑他にもカスタマイズしている箇所がないか調査してほしい。
+- iterm2とその設定
+- oh-my-zshとその設定
+- Karabinar elementsとその設定
+- Raycastとその設定
+- vscodeとその設定
+- tmuxとその設定
+
+
+設定ファイルは~/.configにある。
+~/dotfilesに移動して、移行先でコマンド一発で設定したい。
+バックアップはSSDに吐き出す予定。
+
+
+ざっとこんな感じです。手伝って！

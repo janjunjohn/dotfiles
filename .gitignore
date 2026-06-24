@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# iTerm2 runtime junk (we only track the prefs plist + dynamic profile)
+config/iterm2/AppSupport/
+**/SavedState/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.socket.lock
+*.lock
+
+# Karabiner rolling auto-backups (noise)
+config/karabiner/automatic_backups/
+
+# anything secret — never commit
+*.pem
+*.key
+.env
+.netrc
+id_*
