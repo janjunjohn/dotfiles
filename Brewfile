@@ -38,8 +38,8 @@ brew "yarn"
 cask "anki"
 # Voice and text chat software
 cask "discord"
-# Terminal built on web technologies
-cask "hyper"
+# Terminal emulator (replaces Hyper; config in iterm2/ + config/colors/)
+cask "iterm2"
 # Collaboration platform for API development
 cask "postman"
 # Control your tools with a few keystrokes

@@ -16,7 +16,7 @@
 |---|---|---|
 | Anki | `anki` | 25.09 |
 | Discord | `discord` | 0.0.290 |
-| Hyper | `hyper` | — |
+| iTerm2 | `iterm2` | 3.6.x（Hyperから移行・設定は `iterm2/`） |
 | Postman | `postman` | 10.24.26 |
 | Raycast | `raycast` | 1.70.2 |
 | Visual Studio Code | `visual-studio-code` | 1.107.1 |
