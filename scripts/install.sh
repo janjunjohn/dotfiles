@@ -12,14 +12,28 @@ DOTFILES="${DOTFILES:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 echo "==> [install] Homebrew"
 if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  # Make brew available in this shell (Apple Silicon path).
-  if [ -x /opt/homebrew/bin/brew ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-  elif [ -x /usr/local/bin/brew ]; then
-    eval "$(/usr/local/bin/brew shellenv)"
-  fi
 else
   echo "    Homebrew already installed."
+fi
+
+# Resolve the brew binary (Apple Silicon first, then Intel) and put it on PATH for
+# the rest of THIS script run.
+if [ -x /opt/homebrew/bin/brew ]; then
+  BREW_BIN=/opt/homebrew/bin/brew
+elif [ -x /usr/local/bin/brew ]; then
+  BREW_BIN=/usr/local/bin/brew
+else
+  BREW_BIN="$(command -v brew || true)"
+fi
+[ -n "$BREW_BIN" ] && eval "$("$BREW_BIN" shellenv)"
+
+# Persist Homebrew on PATH for FUTURE login shells. The Homebrew installer only
+# prints this as a "next step" and leaves it to the user; do it here so a fresh
+# machine isn't left with brew (and everything it installs: pyenv, rbenv, node…)
+# missing from PATH in new terminals. Idempotent — skipped if already present.
+if [ -n "$BREW_BIN" ] && ! grep -qF "$BREW_BIN shellenv" "$HOME/.zprofile" 2>/dev/null; then
+  echo "    Adding Homebrew shellenv to ~/.zprofile"
+  printf '\neval "$(%s shellenv)"\n' "$BREW_BIN" >> "$HOME/.zprofile"
 fi
 
 echo "==> [install] brew bundle (formulae, casks, VSCode extensions)"
