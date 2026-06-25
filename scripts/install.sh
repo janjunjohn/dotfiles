@@ -25,6 +25,12 @@ fi
 echo "==> [install] brew bundle (formulae, casks, VSCode extensions)"
 # Brewfile contains taps, brews, casks AND `vscode "..."` lines, so this also
 # installs every VSCode extension (requires VSCode's `code` CLI, installed by the cask).
+#
+# NOTE: third-party taps (daipeihust/tap for im-select, heroku/brew) are blocked by
+# newer Homebrew as "untrusted" and brew bundle will fail until you opt in MANUALLY:
+#     brew trust daipeihust/tap && brew trust heroku/brew
+# We do NOT auto-trust here on purpose — trusting a tap lets it run arbitrary code,
+# so it should be a deliberate, reviewed choice. Run the above once, then re-run.
 brew bundle --file="$DOTFILES/Brewfile" || {
   echo "    brew bundle reported errors (often a cask needing a re-run). Retrying once..."
   brew bundle --file="$DOTFILES/Brewfile"

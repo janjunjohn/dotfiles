@@ -45,7 +45,7 @@ cask "visual-studio-code"
 # System monitoring menu-bar app (license key entered manually after install)
 cask "istat-menus@6"
 # Container runtime / Docker Desktop
-cask "docker"
+cask "docker-desktop"
 # Team chat & meetings
 cask "microsoft-teams"
 # Video conferencing
@@ -57,7 +57,7 @@ cask "claude"
 # Keyboard customizer (config in config/karabiner/)
 cask "karabiner-elements"
 # Logitech mouse/keyboard settings
-cask "logi-options-plus"
+cask "logi-options+"
 # Fonts — required by iTerm2 / VSCode terminal (SauceCodePro Nerd Font Mono),
 # VSCode editor (Source Code Pro), and powerlevel10k glyphs. Without these the
 # prompt icons render as tofu/garbled boxes.
@@ -68,8 +68,6 @@ vscode "asvetliakov.vscode-neovim"
 vscode "bierner.markdown-preview-github-styles"
 vscode "docker.docker"
 vscode "eamodio.gitlens"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "humao.rest-client"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
@@ -82,4 +80,3 @@ vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
 vscode "sdras.night-owl"
 vscode "streetsidesoftware.code-spell-checker"
-npm "corepack"

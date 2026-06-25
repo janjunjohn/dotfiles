@@ -26,8 +26,14 @@ defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" '^p'
 
 echo "==> [macos] Safari tab-group shortcuts"
 # Cmd-Ctrl-J / Cmd-Ctrl-K to cycle Safari tab groups.
-defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Go to Next Tab Group"     '@^j'
-defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Go to Previous Tab Group" '@^k'
+# Safari is sandboxed: writing its container needs the running terminal to have
+# Full Disk Access (System Settings > Privacy & Security > Full Disk Access).
+# Without it these writes fail — keep them non-fatal so the rest of this script
+# (trackpad/Dock/Finder/iTerm2 prefs below) still runs. Re-run after granting FDA.
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Go to Next Tab Group"     '@^j' \
+  || echo "    !! Safari write failed (grant Full Disk Access, then re-run). Skipping."
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Go to Previous Tab Group" '@^k' \
+  || echo "    !! Safari write failed (grant Full Disk Access, then re-run). Skipping."
 
 # ── Extras discovered on the old Mac (comment out any you don't want) ──────────
 

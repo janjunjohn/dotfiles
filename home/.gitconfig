@@ -1,2 +1,9 @@
 [push]
 	default = current
+# Machine-local identity (name/email) and any private settings live here, kept
+# out of this public repo. Create ~/.gitconfig.local on each machine with:
+#   [user]
+#       name = ...
+#       email = ...
+[include]
+	path = ~/.gitconfig.local
