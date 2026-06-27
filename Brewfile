@@ -10,6 +10,16 @@ brew "python@3.12"
 brew "autojump"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Recursively search directories for a regex pattern (nvim/telescope live grep)
+brew "ripgrep"
+# Fast, user-friendly alternative to find (nvim/telescope file search, fzf)
+brew "fd"
+# Simple terminal UI for git — used as a tmux popup (prefix+g) and via nvim snacks
+brew "lazygit"
+# Mobile shell: survives Wi-Fi/cellular roaming and sleep (iPad/Blink -> Mac mini)
+brew "mosh"
+# Syntax-highlighting pager for richer git/diff output
+brew "git-delta"
 # Drop-in replacement for MySQL
 brew "mariadb", restart_service: :changed
 # Ambitious Vim-fork focused on extensibility and agility
@@ -54,6 +64,10 @@ cask "zoom"
 cask "appcleaner"
 # Claude desktop app
 cask "claude"
+# Claude Code CLI (stable channel). Drives the tmux/Remote Control workflow.
+# No auto-update via brew; set CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1 to let
+# Claude Code self-upgrade through brew, or run `brew upgrade claude-code`.
+cask "claude-code"
 # Keyboard customizer (config in config/karabiner/)
 cask "karabiner-elements"
 # Logitech mouse/keyboard settings
