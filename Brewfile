@@ -20,6 +20,8 @@ brew "lazygit"
 brew "mosh"
 # Syntax-highlighting pager for richer git/diff output
 brew "git-delta"
+# GitHub CLI — PRs, issues, gh auth; also powers Claude Code's PR status indicator
+brew "gh"
 # Drop-in replacement for MySQL
 brew "mariadb", restart_service: :changed
 # Ambitious Vim-fork focused on extensibility and agility
